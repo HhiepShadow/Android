@@ -1,0 +1,2 @@
+- Includes:
+    - Package Name: Defines the package name of the application 
