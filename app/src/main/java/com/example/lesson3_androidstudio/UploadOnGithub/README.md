@@ -15,3 +15,11 @@ all unversioned files and make them ready to update in Github
 -> Select `Unversioned Files`
 -> Input the `Commit messgae` as Initial Commit  
 -> Click on `Commit` button 
+
+### 3. Step 3:
+-  On top navigation bar  
+-> Click on `Git`  
+-> Choose `New branch` (unnecessary)  
+-> Input your new branch name and Check the `Checkout branch` checkbox
+-> Click `Push` button  
+-> Push anyway 
