@@ -3,4 +3,7 @@
     <string name="heading">Services in Android</string>
     <string name="startServiceBtn">Start the Service</string>
     <string name="stopServiceBtn">Stop the Service</string>
+    <string name="hintText">Enter User Name</string>
+    <string name="insertBtn">Insert Data</string>
+    <string name="loadBtn">Load Data</string>
 </resources>
