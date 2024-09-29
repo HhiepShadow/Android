@@ -23,3 +23,71 @@
     - Activity can return result for Activity which calls it
     - Allows interaction between screens
 
+### Activity's life cycle:
+- ```
+  onCreate(Bundle savedInstanceState):
+  ```
+  - Called when Activity is created
+  - Set up user interface and initialize the necessary components
+- ```
+   onStart()
+   ```
+  - Called when Activity becomes visible to the user
+- ```
+   onResume()
+   ```
+   - Called when Activity starts to interact with user
+- ```
+  onPause()
+  ```
+  - Called when Activity is not in interactive state but has not been destroyed
+- ``` 
+  onStop()
+   ```
+  - Called when Activity is no longer visible to the user
+- ``` 
+  onDestroY()
+   ```
+  - Called when Activity is destroyed and will not be used anymore
+
+### Example:
+```java
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main); // Thiết lập giao diện người dùng từ layout XML
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Thực hiện các tác vụ khi Activity bắt đầu
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Thực hiện các tác vụ khi Activity có thể tương tác
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Lưu trạng thái hoặc giải phóng tài nguyên
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // Giải phóng tài nguyên không cần thiết
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Dọn dẹp trước khi Activity bị hủy
+    }
+}
+```
