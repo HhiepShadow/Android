@@ -21,7 +21,7 @@ import java.util.HashMap;
 public class MyContentProvider extends ContentProvider {
     private static final String AUTHORITY = "com.example.lesson5_components";
     private static final String PATH_ITEMS = "items";
-    private static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + PATH_ITEMS);
+    public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + PATH_ITEMS);
     private static final int ITEMS = 1;
     private static final String ID = "id";
     private static final String NAME = "name";
@@ -104,7 +104,17 @@ public class MyContentProvider extends ContentProvider {
 
     @Override
     public int delete(@NonNull Uri uri, @Nullable String s, @Nullable String[] strings) {
-        return 0;
+        int count = 0;
+        switch (uriMatcher.match(uri)) {
+            case ITEMS:
+                count = db.delete(TABLE_NAME, s, strings);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown URI " + uri);
+        }
+
+        getContext().getContentResolver().notifyChange(uri, null);
+        return count;
     }
 
     @Override

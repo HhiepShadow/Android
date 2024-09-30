@@ -10,7 +10,7 @@
         android:id="@+id/startServiceBtn"
         android:layout_width="239dp"
         android:layout_height="91dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="32dp"
         android:text="@string/startServiceBtn"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,9 +21,52 @@
         android:id="@+id/stopServiceBtn"
         android:layout_width="244dp"
         android:layout_height="87dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="136dp"
         android:text="@string/stopServiceBtn"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextAdd"
+        android:layout_width="242dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="324dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="416dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLoad"
+        android:layout_width="169dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="492dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewList"
+        android:layout_width="171dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="604dp"
+        android:text="TextView"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

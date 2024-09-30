@@ -11,8 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lesson5_Components"
-        android:authorities="com.example.lesson5_components"
         tools:targetApi="31">
+        <provider
+            android:authorities="com.example.lesson5_components"
+            android:name=".ContentProviders.MyContentProvider"
+            android:enabled="true"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
