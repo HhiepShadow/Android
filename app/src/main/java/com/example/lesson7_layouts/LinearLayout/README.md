@@ -13,8 +13,10 @@
 />  
 ```
 - Values:
-  - vertical: Arrange vertically
-  - horizontal: Arrange horizontally 
+  - vertical: Arrange vertically:
+    - Vertical list: One column and multiple rows
+  - horizontal: Arrange horizontally:
+    - Horizontal list: One row and multiple columns
 
 ### LinearLayout attributes:
 

@@ -2,6 +2,10 @@ plugins {
     id("com.android.application")
 }
 
+dependencies {
+    implementation("io.supercharge:shimmerlayout:2.1.0")
+}
+
 android {
     namespace = "com.example.lesson7_layouts"
     compileSdk = 34
