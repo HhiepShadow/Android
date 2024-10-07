@@ -361,4 +361,14 @@ Example: We will autosize the dial pad
     __autoSizeMinTextSize__ and __autoSizeMaxTextSize__
     
 
-### Different between `px`, `dip`(`dp`) and `sp`:
+### Differences between `px`, `dip`(`dp`) and `sp`:
+| **Unit**    | **Scale with Screen Density (DPI)** | **User-Dependent Scaling** | **When to Use**                      |
+|-------------|-------------------------------------|----------------------------|--------------------------------------|
+| `px`        | No (Actual screen pixels)           | No                         | For specific pixel-level graphics    |
+| `dp` / `dip`| Yes (Density-independent)           | No                         | For most UI elements (layout, margin, padding, etc.) |
+| `sp`        | Yes (Density-independent)           | Yes (Text scaling by user settings) | Only for text sizes                  |
+
+&rarr; Summary:  
+- **`px`**: Avoid using for UI sizes, as it doesn't scale well across devices with different screen densities.
+- **`dp`**: Best for defining sizes of UI elements, ensuring consistent display across various screen resolutions.
+- **`sp`**: Should only be used for font sizes, to respect user preferences for text scaling.
